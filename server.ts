@@ -1,5 +1,4 @@
 import { Socket } from "socket.io";
-import app from "./app";
 import { PORT } from "./config/env.config";
 import { io, server } from "./socket/socket";
 

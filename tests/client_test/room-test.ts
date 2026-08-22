@@ -1,5 +1,5 @@
 import { io, Socket } from "socket.io-client";
-import { PORT } from "../config/env.config";
+import { PORT } from "../../config/env.config";
 
 const room = process.argv[2] || "general";
 const username = process.argv[3] || `User-${Math.random().toString(36).slice(2, 6)}`;
@@ -50,7 +50,7 @@ socket.on("connect_error", (error) => {
 
 // Listen for user input
 process.stdin.setEncoding("utf-8");
-process.stdin.on("data", (data) => {
+process.stdin.on("data", (data: string) => {
   const message = data.trim();
   if (message) {
     socket.emit("message:send", { roomId: room, content: message });

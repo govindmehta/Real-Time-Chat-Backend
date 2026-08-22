@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-import { PORT } from "../config/env.config";
+import { PORT } from "../../config/env.config";
 
 console.log("=== Client 2 (Receiver) ===\n");
 
